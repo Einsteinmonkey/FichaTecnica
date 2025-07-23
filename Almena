@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recreación del Folleto Inmobiliario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .address {
+            color: red;
+            font-weight: bold;
+        }
+        .price {
+            font-size: 24px;
+            color: red;
+        }
+        .logo {
+            width: 150px; /* Ajusta según sea necesario */
+        }
+        .new-market {
+            background-color: #d4edda;
+            color: #155724;
+            text-align: right;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+        .house-image {
+            width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        .description {
+            display: flex;
+            justify-content: space-between;
+        }
+        .text {
+            flex: 2;
+            padding-right: 20px;
+        }
+        .specs {
+            flex: 1;
+            background-color: red;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .specs table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .specs td {
+            padding: 5px;
+            border-bottom: 1px solid white;
+        }
+        .bottom {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+        .agent-photo {
+            width: 80px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .agent-info {
+            flex: 1;
+        }
+        .agent-name {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="address">
+                54 Av. Tikal<br>
+                Fraccionamiento Quintas Almendras<br>
+                Supermanzana 42<br>
+                Cancun, Quintana Roo, Mexico<br>
+                <span class="price">MXN $3,450,000</span>
+            </div>
+            <img class="logo" src="https://placehold.co/150x50?text=SIEMBRA+Inmobiliaria" alt="SIEMBRA Inmobiliaria Logo">
+        </div>
+        <div class="new-market">Nuevo en el mercado</div>
+        <img class="house-image" src="https://placehold.co/800x400?text=Imagen+de+la+Casa" alt="Casa en condominio privado">
+        <div class="description">
+            <div class="text">
+                Casa en condominio privado en Cancún. Alberca, gym, área eventos, parque mascotas, terraza, seguridad 24/7. 3 rec, 2 con vestidor/bar, PB: sala/comedor amplios, estudio, cocina equipada, cuarto servicio c/baño, patio. 2 estacionamientos.<br>
+                ¡Agenda tu visita!
+            </div>
+            <div class="specs">
+                <table>
+                    <tr>
+                        <td>Recámaras:</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Baños:</td>
+                        <td>3 3/4</td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de construcción:</td>
+                        <td>ene 2013</td>
+                    </tr>
+                    <tr>
+                        <td>Área Habitables:</td>
+                        <td>173 m²</td>
+                    </tr>
+                    <tr>
+                        <td>Amuetado:</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Área Comunnes:</td>
+                        <td>Si</td>
+                    </tr>
+                    <tr>
+                        <td>Área Construida:</td>
+                        <td>173 m²</td>
+                    </tr>
+                    <tr>
+                        <td>Terreno:</td>
+                        <td>148 m²</td>
+                    </tr>
+                    <tr>
+                        <td>ID de la Propiedad:</td>
+                        <td>2279-3303</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="bottom">
+            <img class="agent-photo" src="https://placehold.co/80x100?text=Foto+Agente" alt="Foto de la agente">
+            <div class="agent-info">
+                <img src="https://placehold.co/50x50?text=KW" alt="KW Logo" style="width: 50px;"><br>
+                <span class="agent-name">Equipo Siembra Inmobiliaria</span><br>
+                KW Riviera Maya<br>
+                9981514029<br>
+                erika.torres@kwmexico.mx<br>
+                Av. Kabah Manzana 2, Local 1-C Corporativo Parque Kabah
+            </div>
+        </div>
+    </div>
+</body>
+</html>
