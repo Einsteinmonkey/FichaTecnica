@@ -26,13 +26,17 @@
         .address {
             color: red;
             font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            background-color: #f9ebeb;
+            border-radius: 5px;
         }
         .price {
             font-size: 24px;
             color: red;
         }
         .logo {
-            width: 150px; /* Ajusta según sea necesario */
+            width: 150px;
         }
         .new-market {
             background-color: #d4edda;
@@ -41,10 +45,36 @@
             padding: 5px 10px;
             font-weight: bold;
         }
-        .house-image {
+        .slideshow-container {
+            position: relative;
+            max-width: 800px;
+            margin: 10px 0;
+        }
+        .mySlides {
+            display: none;
             width: 100%;
             height: auto;
-            margin: 10px 0;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
         }
         .description {
             display: flex;
@@ -53,6 +83,10 @@
         .text {
             flex: 2;
             padding-right: 20px;
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
         }
         .specs {
             flex: 1;
@@ -99,28 +133,45 @@
                 Cancun, Quintana Roo, Mexico<br>
                 <span class="price">MXN $3,450,000</span>
             </div>
-            <img class="logo" src="logo1.jng">
+            <img class="logo" src="logo1.jpg" alt="Logo">
         </div>
         <div class="new-market">Nuevo en el mercado</div>
-        <img class="house-image" src="https://placehold.co/800x400?text=Imagen+de+la+Casa" alt="Casa en condominio privado">
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="https://placehold.co/800x400?text=Imagen+1+de+la+Casa" alt="Casa 1">
+            </div>
+            <div class="mySlides">
+                <img src="https://placehold.co/800x400?text=Imagen+2+de+la+Casa" alt="Casa 2">
+            </div>
+            <div class="mySlides">
+                <img src="https://placehold.co/800x400?text=Imagen+3+de+la+Casa" alt="Casa 3">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex-1].style.display = "block";
+            }
+        </script>
         <div class="description">
             <div class="text">
                 Casa en condominio privado en Cancún. Alberca, gym, área eventos, parque mascotas, terraza, seguridad 24/7. 3 rec, 2 con vestidor/bar, PB: sala/comedor amplios, estudio, cocina equipada, cuarto servicio c/baño, patio. 2 estacionamientos.<br>
                 ¡Agenda tu visita!
-                Caracteristicas
-                sala, comedor,cocina equipada, patio
-                trasero, estudio planta baja, medio
-                baño, segundo piso tres recamaras con
-                baño propio y vestidor.Dos lugares de
-                estacionamiento
-                Alberca, gym, spa, área techada
-                `para eventos.
-                construcción 174 m2
-                Terreno 148 m2
-                $3,450,000.00 MN
-                se aceptan créditos bancarios.
-                INFONAVIT, recursos propios
-                https://kwmexico.mx/2279-3303
             </div>
             <div class="specs">
                 <table>
