@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -188,6 +189,24 @@
                 }
                 slides[slideIndex-1].style.display = "block";
             }
+
+            // Add swipe functionality for mobile
+            const slideshow = document.querySelector('.slideshow-container');
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            slideshow.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            slideshow.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                if (touchEndX < touchStartX - 50) {
+                    plusSlides(1); // Swipe left - next
+                } else if (touchEndX > touchStartX + 50) {
+                    plusSlides(-1); // Swipe right - previous
+                }
+            });
         </script>
         <div class="description">
             <div class="text">
@@ -263,6 +282,4 @@
     </div>
 </body>
 </html>
-    </div>
-</body>
-</html>
+```
